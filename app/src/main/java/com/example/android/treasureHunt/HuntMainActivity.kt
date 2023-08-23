@@ -88,6 +88,11 @@ class HuntMainActivity : AppCompatActivity() {
  *  checkDeviceLocationSettingsAndStartGeofence again to make sure it's actually on, but
  *  we don't resolve the check to keep the user from seeing an endless loop.
  */
+    @Deprecated("Deprecated in Java", ReplaceWith(
+        "super.onActivityResult(requestCode, resultCode, data)",
+        "androidx.appcompat.app.AppCompatActivity"
+    )
+    )
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         // TODO: Step 7 add code to check that the user turned on their device location and ask
